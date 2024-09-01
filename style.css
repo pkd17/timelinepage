@@ -1,0 +1,150 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.main {
+  width: fit-content%;
+  max-width: 1200px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+  padding: 20px;
+}
+
+.dr {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dr img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.head_2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.head_1 {
+  font-size: 18px;
+  color: #555;
+  margin-top: 10px;
+}
+
+#timeline-steps {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  position: relative;
+}
+
+#timeline-steps li {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  width: calc(100% / 7);
+}
+
+#timeline-steps li::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #007bff;
+  border-radius: 50%;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: background-color 0.3s;
+}
+
+#timeline-steps li.active::before {
+  background-color: #dd4ded;
+}
+
+#timeline-steps li .progress {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  border: 2px solid #34cf63;
+  margin: 0 auto 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#timeline-steps li.active .progress {
+  background-color: #d66de4;
+  color: #d23e3e;
+}
+
+#timeline-steps li .progress p {
+  margin: 0;
+  font-size: 16px;
+}
+
+#timeline-steps li .progress .uil-check-circle {
+  font-size: 20px;
+  color: #fff;
+  display: none;
+}
+
+#timeline-steps li.active .progress .uil-check-circle {
+  display: block;
+}
+
+#timeline-steps li .text {
+  font-size: 14px;
+  color: #333;
+}
+
+#timeline-steps li .icon {
+  font-size: 24px;
+  color: #44cf59;
+  margin-bottom: 10px;
+}
+
+.timeline-content {
+  display: none;
+}
+
+.timeline-content.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-content h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  font-size: 14px;
+  color: #666;
+}
+
+.timeline-content img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
